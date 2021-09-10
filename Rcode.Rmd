@@ -17,7 +17,34 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r}
 df = read.csv('data/TC.csv')
-??randcorr
+X = read.csv('data/X.csv')
+D = data.matrix(df)
+norm(D%*%t(D), type="O")
+
+test = matrix(c(1,2,62.5,3,2,3,3,2,8), nrow=3, byrow=TRUE)
+norm(test)
+
+matrix( 0 ,6, 1 )
+
+A = matrix(0, 6, 1)
+A[4,1] = -25
+2.5*sign(A)*pmax(replicate(6, 0), abs(A)-0.3)
+sign(A)
+pmax(replicate(6, 0), abs(A)-0.3)
+Alr <- matrix ( 0 ,6 , 441 )
+
+Ao <- matrix ( 0 , 6, 1 )
+
+A <- Ao+2.5 *(t(D)%*%(X[,k]-(D%*%Ao ) ) )
+A =  (1/(1+ 2.5 ) ) * (sign(A)*pmax (replicate(6, 0 ), abs(A)-2.5 ) )
+pmax (replicate(6, 0 ), abs(A)-2.5 )
+b = X[,k]
+a = X[,k]-(D%*%Ao )
+
+?svd
+test = svd(D)
+test
+
 ```
 
 ## Including Plots
